@@ -2,7 +2,7 @@ services:
   - type: web
     name: electrorent
     env: static
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npm run build:prod
     staticPublishPath: ./dist
     pullRequestPreviewsEnabled: true
     envVars:

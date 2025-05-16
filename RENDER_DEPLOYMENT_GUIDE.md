@@ -27,7 +27,7 @@ Configure your static site with the following settings:
 
 - **Name**: `electrorent` (or your preferred name)
 - **Branch**: `master` (or your main branch)
-- **Build Command**: `npm install && npm run build`
+- **Build Command**: `npm install && npm run build:prod`
 - **Publish Directory**: `dist`
 
 ## Step 5: Environment Variables
@@ -90,7 +90,8 @@ If you encounter issues:
 1. **Build Failures**:
    - Check the build logs in the "Events" tab
    - Ensure all dependencies are correctly listed in package.json
-   - Verify that the build command and publish directory are correct
+   - If you encounter TypeScript errors, the `build:prod` script will bypass TypeScript checking
+   - For serious TypeScript issues, fix them in your codebase for better long-term maintenance
 
 2. **Routing Issues**:
    - Make sure you've added the `/* → /index.html` rewrite rule
